@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { getEnvDBHost, getEnvDBName, getEnvDBPassword, getEnvDBPort, getEnvDBUser } from './pkg/enviornment-utils';
+import { getEnvDBHost, getEnvDBName, getEnvDBPassword, getEnvDBPort, getEnvDBUser, getEnvLogLevel } from './pkg/enviornment-utils';
 
 @Module({
   imports: [
@@ -15,6 +15,8 @@ import { getEnvDBHost, getEnvDBName, getEnvDBPassword, getEnvDBPort, getEnvDBUse
       database: getEnvDBName(process),
       autoLoadEntities: true,
       synchronize: true,
+      migrations: [`${__dirname}/migrations/*{.ts,.js}`],
+      logging: getEnvLogLevel(process)
     }),
   ],
   controllers: [AppController],

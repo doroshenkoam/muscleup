@@ -6,9 +6,12 @@ export class User {
   @PrimaryColumn({ name: 'id' })
   id: Long;
 
-  @Column({ type: 'text', nullable: false })
-  name: string;
+  @Column({ type: 'varchar', nullable: false })
+  name: String;
 
-  @Column({ type: 'bool', nullable: true })
+  @Column({ type: 'bool', nullable: false })
+  confirmed: Boolean;
+
+  @Column({ type: 'timestamptz', nullable: true })
   deleted_at?: Date;
 }

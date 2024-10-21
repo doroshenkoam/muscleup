@@ -5,3 +5,5 @@ export const getEnvDBPassword = R.path<string>(['env', 'PGPASSWORD']);
 export const getEnvDBUser = R.path<string>(['env', 'PGUSER']);
 export const getEnvDBHost = R.path<string>(['env', 'PGHOST']);
 export const getEnvDBName = R.path<string>(['env', 'PGDATABASE']);
+
+export const getEnvLogLevel = R.pathOr<any>('error', ['env', 'LOG_LEVEL']);
