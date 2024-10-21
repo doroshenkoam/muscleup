@@ -3,7 +3,7 @@ import { Column, Entity, PrimaryColumn, Unique } from "typeorm";
 @Unique(['name'])
 @Entity()
 export class ExampleType {
-  @PrimaryColumn({ name: 'id' })
+  @PrimaryColumn({ type: 'int' })
   id: Number;
 
   @Column({ type: 'varchar', nullable: false })

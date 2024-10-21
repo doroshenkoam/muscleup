@@ -3,7 +3,7 @@ import { UserProgram } from "./user_program.entity";
 
 @Entity()
 export class UserExample {
-  @PrimaryGeneratedColumn({ name: 'id' })
+  @PrimaryGeneratedColumn({ type: 'int' })
   id: Number;
 
   @Column({ type: 'int', nullable: false })

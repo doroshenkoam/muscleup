@@ -4,7 +4,7 @@ import { ExampleType } from './example_type.entity';
 @Unique(['name'])
 @Entity()
 export class Example {
-  @PrimaryGeneratedColumn({ name: 'id' })
+  @PrimaryGeneratedColumn({ type: 'int' })
   id: Number;
 
   @Column({ type: 'varchar', nullable: false })

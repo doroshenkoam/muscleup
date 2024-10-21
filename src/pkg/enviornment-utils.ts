@@ -7,3 +7,5 @@ export const getEnvDBHost = R.path<string>(['env', 'PGHOST']);
 export const getEnvDBName = R.path<string>(['env', 'PGDATABASE']);
 
 export const getEnvLogLevel = R.pathOr<any>('error', ['env', 'LOG_LEVEL']);
+
+export const getEnvTelegramBotToken = R.path<string>((['env', 'TELEGRAM_BOT_TOKEN']));

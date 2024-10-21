@@ -3,7 +3,7 @@ import { Long } from 'typeorm';
 
 @Entity()
 export class User {
-  @PrimaryColumn({ name: 'id' })
+  @PrimaryColumn({ type: 'bigint' })
   id: Long;
 
   @Column({ type: 'varchar', nullable: false })

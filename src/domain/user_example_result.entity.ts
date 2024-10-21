@@ -5,7 +5,7 @@ import { UserExample } from "./user_example.entity";
 @Unique(['user_training_id', 'user_example_id'])
 @Entity()
 export class UserExampleResult {
-  @PrimaryGeneratedColumn({ name: 'id' })
+  @PrimaryGeneratedColumn({ type: 'int' })
   id: Number;
 
   @Column({ type: 'int', nullable: false })
@@ -17,7 +17,7 @@ export class UserExampleResult {
   @Column({ type: 'int', nullable: false })
   approach: Number;
 
-  @Column({ type: 'float64', nullable: false })
+  @Column({ type: 'float', nullable: false })
   result: Number;
 
   @Column({ type: 'int', nullable: false })

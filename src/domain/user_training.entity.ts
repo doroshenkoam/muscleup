@@ -4,7 +4,7 @@ import { UserProgram } from "./user_program.entity";
 @Unique(['user_program_id', 'created_at'])
 @Entity()
 export class UserTraining{
-  @PrimaryGeneratedColumn({ name: 'id' })
+  @PrimaryGeneratedColumn({ type: 'int' })
   id: Number;
 
   @Column({ type: 'int', nullable: false })
